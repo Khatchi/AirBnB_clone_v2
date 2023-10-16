@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" A fabric script that distributes an archive 
+""" A fabric script that distributes an archive
 to my web servers, using the function do_deploy.
 """
 
