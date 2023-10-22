@@ -61,7 +61,9 @@ class FileStorage:
         """Deletes and object from __objects"""
         if (obj):
             key = "{}.{}".format(type(obj).__name__, obj.id)
-            del self.__objects[key]
+            if key in self.__objects:
+                del self.__objects[key]
+                self.save()
 
     def close(self):
         """Calls reload method for deserializing
